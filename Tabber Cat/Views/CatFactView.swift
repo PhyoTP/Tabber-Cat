@@ -10,6 +10,9 @@ import SwiftUI
 struct CatFactView: View {
     var body: some View {
         Text("fax no printer")
+            .onAppear(){
+                CatFactsManager.getCatFact()
+            }
     }
 }
 
