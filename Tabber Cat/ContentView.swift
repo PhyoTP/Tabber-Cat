@@ -10,10 +10,29 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            
+            TabView{
+                CatFactView()
+                    .tabItem(){
+                        Label("Cat facts", systemImage: "book.fill")
+                    }
+                CatImagesView()
+                    .tabItem(){
+                        Label("Cats <3", systemImage: "photo.fill")
+                    }
+                CatBounceView()
+                    .tabItem(){
+                        Label("Bounce", systemImage: "arrowshape.bounce.right.fill")
+                    }
+                CatGalleryView()
+                    .tabItem(){
+                        Label("Gallery", systemImage: "photo.stack")
+                    }
+                CatIDView()
+                    .tabItem(){
+                        Label("ID", systemImage: "viewfinder")
+                    }
+            }
         }
         .padding()
     }
